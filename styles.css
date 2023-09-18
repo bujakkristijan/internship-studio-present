@@ -411,8 +411,7 @@
 
     position: absolute; 
     top: 75%; /* pozicionira se u odnosu na gornju ivicu parent container-a, odnosno slike jer slika zauzima ceo container*/
-
-    padding-left: 8%;
+    left: 8%;
 }
 
 .our-products-line{
@@ -422,6 +421,7 @@
 
     position: absolute;
     top: 85%;
+    left: 8%;
     
 }
 
