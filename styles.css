@@ -88,6 +88,7 @@
     font-family: 'Roboto Condensend';
     font-weight: 400;
     font-size: 16px;
+    white-space: nowrap; /* da ne prelama u novi red */
 }
 
 .tab-description{
@@ -149,6 +150,8 @@
     background-color: #BF0F0F;
     height: 6px;
     width: 137px;
+    margin-top: 20px;
+    margin-bottom: 38px;
 }
 
 .subtitle-more-about-us{
@@ -156,6 +159,7 @@
     color: #474747;
     font-weight: 400;
     font-size: 28px;
+    margin-bottom: 38px;
 }
 
 .line2-more-about-us{
@@ -165,5 +169,27 @@
 }
 
 .more-about-us-box-container.text-box{
-    padding-right: 60px;
+    padding-right: 120px;
+    padding-top: 38px;
+}
+
+.description-more-about-us{
+    font-size: 14px;
+    font-weight: 400;
+    color: #474747;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    line-height: 1.9; /* ovako kad stavim, tacno u ravni button bude sa slikom, mada postoji bolji nacin da se uradi */
+    
+}
+
+.button-more-about-us{
+    background-color: #BF0F0F;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #BF0F0F;
+    border-radius: 4px;
 }
