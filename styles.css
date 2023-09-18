@@ -233,3 +233,41 @@
     width: 50px;
     margin-top: 10px;
 }
+
+
+/** DVG NUMBERS CONTAINER **/
+
+.dvg-numbers-title{
+    font-weight: 700;
+    font-size: 42px;
+    color: #303030;
+}
+
+.dvg-numbers-subtitle{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: 'Inter';
+    color: #474747;
+}
+
+.dvg-numbers-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.dvg-numbers-line{
+    /* margin-top: 20px; */
+    background-color: #BF0F0F;
+    height: 6px;
+    width: 137px;
+}
+
+.dvg-numbers-image{
+    width: 100%;
+    height: 345px;
+}
