@@ -197,6 +197,7 @@
 
 /** DISTRIBUTION CONTAINER **/
 /********************************************************/
+
 .image-distribution-container{
     /* width: 100vw; */
     
@@ -209,4 +210,26 @@
 }
 
 
-/** OUR PRODUCTS CONTAINER **/
+/** OUR OFFERS CONTAINER **/
+/**********************************************************/
+
+.our-offers-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 4%;
+    padding-bottom: 8%;
+}
+
+.title-offer{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 12px;
+}
+
+.line-offer{
+    background-color: #BF0F0F;
+    height: 2px;
+    width: 50px;
+    margin-top: 10px;
+}
