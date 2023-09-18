@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+
+.header{
+    width: 100vw;
+    height: 143px;
+    background-color: aqua;
+}
+
+.header-box-1{
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 105px;
+    
+}
+
+.language-container{
+    padding-right: 105px;
+}
+
+.language-label{
+    padding-left: 6px;
+    padding-right: 5px;
+    text-decoration: underline;
+}
