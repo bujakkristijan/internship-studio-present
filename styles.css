@@ -234,8 +234,9 @@
     margin-top: 10px;
 }
 
-
+/**************************************************/
 /** DVG NUMBERS CONTAINER **/
+/**************************************************/
 
 .dvg-numbers-title{
     font-weight: 700;
@@ -325,3 +326,102 @@
 .numbers-box-container.last-box{
     border-right: none;
 }
+
+/**************************************************/
+/** OUR PRODUCTS CONTAINER **/
+/**************************************************/
+
+.our-products-container{
+    background-color: #F4F4F4;
+    /* The padding for your .our-products-container is not affecting the layout as expected because the position: absolute; 
+    property is used for the child elements within the .our-products-container. 
+    When an element has position: absolute;
+    , it is taken out of the normal document flow, 
+    which means it won't be affected by the padding of its parent container.*/
+    padding-top: 70px;
+    padding-bottom: 70px;
+    /* padding-left: 36px;
+    padding-right: 36px; */
+    display: flex;
+    flex-direction: column;
+    /* The issue you're experiencing with the .our-products-title-line not being 
+    centered within its parent container despite using justify-content: center;
+    on the parent is likely due to the fact that justify-content primarily works for aligning flex items along the main axis,
+    which is horizontal in this case because you've used flex-direction: column;.*/
+    align-items: center;
+    /* width: 100%; */
+    gap: 40px; /* razmak izmedju flex items-a */
+}
+
+.our-products-text-main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center; /* MORA ALIGN ITEMS ZATO STO JE FLEX DIRECTION COLUMN!!! */
+    gap: 40px;
+}
+
+.our-products-title{
+    font-family: 'Inter';
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.our-products-description{
+    text-align: center;
+    font-size: 14px;
+    line-height: 22.4px;
+    width: 40%;
+    text-align: center;
+}
+
+.our-products-title-line{
+    height: 3px;
+    width: 40%;
+    background-color:#C4C4C466;
+    text-align: center;
+}
+
+.our-products-image-main-container{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.our-products-image-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.our-products-image-container-box{
+    position: relative; /* stavim relative da bih mogao tekst i liniju da stavim absolute i pozicioniram ispod slike */
+}
+
+.our-products-name{
+    font-family: 'Roboto';
+    font-size: 24px;
+    line-height: 22px;
+    color: #474747;
+    font-weight: 400;
+
+    position: absolute; 
+    top: 75%; /* pozicionira se u odnosu na gornju ivicu parent container-a, odnosno slike jer slika zauzima ceo container*/
+
+    padding-left: 8%;
+}
+
+.our-products-line{
+    height: 2px;
+    background-color: #BF0F0F;
+    width: 53px;
+
+    position: absolute;
+    top: 85%;
+    
+}
+
