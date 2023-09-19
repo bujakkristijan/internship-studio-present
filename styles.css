@@ -517,7 +517,35 @@
         background-size: cover; /* This scales the background image to cover the entire container */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         background-position: center; /* Center the background image horizontally and vertically */
-    
-    
+}
+
+.footer-contact-title{
+    color: white;
+}
+.footer-big-row-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-contact-box-img-text-container{
+    display: flex;
+}
+
+.footer-row-box-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-box-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 166px; /* setujem max-width da bi se deo teksta prelomio u novi red kao sto je u figmi tacno */
+}
+
+.footer-contact-text{
+    /* font-family: 'Roboto'; */
+    font-size: 14px;
+    line-height: 22.4px;
+    color: white;
 }
 
