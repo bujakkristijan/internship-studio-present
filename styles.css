@@ -517,6 +517,9 @@
         background-size: cover; /* This scales the background image to cover the entire container */
         background-repeat: no-repeat; /* Prevent the image from repeating */
         background-position: center; /* Center the background image horizontally and vertically */
+
+        display: flex;
+        flex-direction: column;
 }
 
 .footer-contact-title{
@@ -530,11 +533,15 @@
     display: flex;
     /* justify-content: space-around; */
     justify-content: center; /* ovako mozda lakse postignem kako treba po izgledu u figmi da bude, posle dodam padding na svaki box koliko treba */
-    padding-top: 80px;
+    padding-top: 60px; 
     padding-left: 60px;
     padding-right: 60px;
 
     /* gap: 60px; */
+
+    flex-grow: 0;  /* Prevent this container from growing */
+
+    margin-bottom: 20px; /* da odvoji ceo container od small containera koji je zamracen */
 }
 
 .footer-contact-box-img-text-container{
@@ -596,3 +603,41 @@
     margin-right: 8px;
 }
 
+
+/***** FOOTER SMALL ROW CONTAINER ****/
+.footer-small-row-container{
+    background-color: rgba(0, 0, 0, 0.33);
+    flex-grow: 1; /* Grow to take up available space */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-small-row-box-container{
+    /* height: 100%; */
+   
+}
+
+.footer-small-row-box-text{
+    color: white;
+    opacity: 0.3;
+    font-size: 14px;
+    line-height: 19.32px;
+    font-family: 'Roboto';
+    /* padding-top: 12px;
+    padding-bottom: 12px; */
+
+}
+
+.footer-small-row-box-text.underlined{
+    text-decoration: underline;
+}
+
+.footer-small-row-box-text.with-parts{
+    display: flex;
+}
+
+.footer-small-row-text-part-2{
+    text-decoration: underline;
+}
