@@ -425,3 +425,20 @@
     
 }
 
+
+/**************************************************/
+/** OUR BRANDS CONTAINER **/
+/**************************************************/
+
+.our-brands-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.our-brands-image-main-container{
+    display: flex;
+}
+
+
