@@ -202,7 +202,7 @@ swiper-container {
 .line2-more-about-us{
     height: 3px;
     background-color: #C4C4C466;
-    width: 524px;
+    width: 100%;
 }
 
 .more-about-us-box-container.text-box{
