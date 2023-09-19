@@ -521,25 +521,47 @@
 
 .footer-contact-title{
     color: white;
+    font-family: 'Inter';
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
 }
 .footer-big-row-container{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center; /* ovako mozda lakse postignem kako treba po izgledu u figmi da bude, posle dodam padding na svaki box koliko treba */
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    /* gap: 60px; */
 }
 
 .footer-contact-box-img-text-container{
     display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-row-box-container{
     display: flex;
     flex-direction: column;
+
+    padding-right: 140px;
+    padding-left: 40px;
+    border-right: 1px rgba(255, 255, 255, 0.26) solid; /* dodam opaciti na border, da se providi */
+}
+
+.footer-row-box-container.last{
+    border-right: none; /* skidam border sa poslednjeg */
 }
 
 .footer-contact-box-container{
     display: flex;
     flex-direction: column;
-    max-width: 166px; /* setujem max-width da bi se deo teksta prelomio u novi red kao sto je u figmi tacno */
+    max-width: 220px; /* setujem max-width da bi se deo teksta prelomio u novi red kao sto je u figmi tacno */
+    margin-top: 10px;
 }
 
 .footer-contact-text{
@@ -547,5 +569,30 @@
     font-size: 14px;
     line-height: 22.4px;
     color: white;
+}
+
+.footer-socials-text{
+    font-size: 14px;
+    line-height: 26px;
+    color: white;
+}
+
+.footer-tab-text{
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400; /* svakako je vrv po defaultu toliko */
+    font-family: 'Roboto Condesed', 'sans-serif';
+     /* sans-serif, ako ne uspe da ucita roboto condesed */
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+
+.footer-socials-logo-container{
+    margin-top: 20px;
+}
+
+.image-footer-social-logo{
+    margin-right: 8px;
 }
 
