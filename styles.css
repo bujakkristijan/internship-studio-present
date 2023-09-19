@@ -448,7 +448,20 @@ swiper-container {
 
     position: absolute; 
     top: 75%; /* pozicionira se u odnosu na gornju ivicu parent container-a, odnosno slike jer slika zauzima ceo container*/
-    left: 8%;
+    /* left: 8%; */ /* ne treba vise, kako sam slajder stavio */
+
+    left: 50%; /* Move the element to the horizontal center of its parent */
+    transform: translateX(-50%); /* Center the element horizontally */
+    white-space: nowrap;
+}
+
+.our-products-name::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 53px;
+    background-color: #BF0F0F;
+    margin-top: 10px;
 }
 
 .our-products-line{
@@ -463,10 +476,75 @@ swiper-container {
 }
 
 .our-products-line.special{
-    height: 1px !important; /* kad stavim 2, bude malo deblja nego na .our-products-line, nzm sto */
+    height: 2px !important; /* kad stavim 2, bude malo deblja nego na .our-products-line, nzm sto */
     top: 91% !important;
 }
 
+
+/******** SWIPER OUR PRODUCTS STARTS ******/
+
+.mySwiper-our-products {
+    width: 100%;
+    /* height: 100%; */
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    /* width: 100%; */
+    height: 350px;
+    margin: 20px auto;
+  }
+
+.swiper-our-products {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 100px; */ /* da smanji sliku malo, ali moram izbrisati onda za screen size < 900px */
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+   /* object-fit: contain; */ /* stavljam contain da bi se lepo videla cela slike */
+  }
+
+  .swiper-pagination{
+    display: none !important;  /* da se ne vidi broj slika, preko inspect sam nasao tacno naziv klase...ali iz nekog razloga vise ne radi, a radilo je */
+   
+  }
+
+
+  /* Styles for screens less than 900px */
+@media screen and (max-width: 1200px){
+    .our-products-name{
+        font-size: 20px;
+    }
+  }
+
+@media screen and (max-width: 1000px){
+    .our-products-name{
+        font-size: 16px;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+
+    .our-products-name{
+        font-size: 16px;
+    }
+
+    #mySwiper-our-products {
+        --swiper-per-view: 1;
+      }
+}
+  /******** SWIPER OUR PRODUCTS FINISH ******/
 
 /**************************************************/
 /** OUR BRANDS CONTAINER **/
