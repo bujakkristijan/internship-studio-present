@@ -243,6 +243,9 @@ swiper-container {
     background-position: center;
     background-size: cover;
 
+     /*parallax scrolling effect */
+    background-attachment: fixed;
+
     display: flex;
     align-items: center;
     justify-content: center;
