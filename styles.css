@@ -237,13 +237,36 @@ swiper-container {
 
 .image-distribution-container{
     /* width: 100vw; */
-    
+    width: 100%;
+    height: 650px; /* koliko god height da zadam, lepo ce se prilagoditi slika, nece se poremetiti i razvuci da izgleda neprirodno */
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url('./images/distribution-image.png'); 
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.image-distribution{
-    width: 100%;
-    height: 502px;
-    /* object-fit: cover; */
+.distribution-text{
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 34px;
+}
+
+.distribution-text::after{
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #BF0F0F;
+    width: 160px;
+
+    margin-top: 16px;
+    /* preko margina centriram liniju */
+    margin-left: auto; /* Horizontal centering */
+    margin-right: auto; /* Horizontal centering */
+    
 }
 
 
@@ -515,7 +538,7 @@ swiper-container {
    /* object-fit: contain; */ /* stavljam contain da bi se lepo videla cela slike */
   }
 
-  .swiper-pagination{
+  .swiper-pagination-fraction{
     display: none !important;  /* da se ne vidi broj slika, preko inspect sam nasao tacno naziv klase...ali iz nekog razloga vise ne radi, a radilo je */
    
   }
