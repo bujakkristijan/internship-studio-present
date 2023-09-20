@@ -405,6 +405,13 @@ swiper-container {
     
 }
 
+@media(max-width: 900px){
+    .distribution-text{
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
+
 
 /** OUR OFFERS CONTAINER **/
 /**********************************************************/
@@ -433,6 +440,11 @@ swiper-container {
 
 @media(max-width: 900px){
     .our-offers-container{
+        flex-direction: column;
+    }
+    .our-offers-box-container{
+        padding: 20px;
+        display: flex;
         flex-direction: column;
     }
 }
@@ -535,6 +547,10 @@ swiper-container {
 @media(max-width: 900px){
     .dvg-numbers-image-container{
         flex-direction: column;
+    }
+
+    .dvg-numbers-image-container{
+        height: fit-content; /* OVO RESAVA PROBLEM DA BUDE SLIKA PREKO CELOG CONTAINER-A I ZA MOBILR SCREEN SIZE */
     }
 }
 
@@ -652,6 +668,12 @@ swiper-container {
 .our-products-line.special{
     height: 2px !important; /* kad stavim 2, bude malo deblja nego na .our-products-line, nzm sto */
     top: 91% !important;
+}
+
+@media(max-width: 900px){
+    .our-products-description{
+        width: 70%;
+    }
 }
 
 
@@ -792,6 +814,13 @@ swiper-container {
 @media(max-width: 900px){
     .our-brands-image-main-container{
         flex-direction: column;
+    }
+
+    .our-brands-title{
+        /* font-size: 28px; */
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
@@ -934,6 +963,11 @@ swiper-container {
 }
 
 @media(max-width: 900px){
+
+    .footer-container{
+        height: fit-content;
+    }
+
     .footer-big-row-container{
         flex-direction: column;
     }
