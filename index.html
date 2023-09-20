@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DVG Company</title>
-    <link rel="stylesheet" href="styles.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <div class="main-container">
 
         <!--*****************************************************************-->
@@ -225,8 +228,12 @@
                 </div>
             </div>
 
-            <swiper-container id="mySwiper" class="mySwiper-our-products" slides-per-view="3" centered-slides="false" space-between="30" pagination="true"
-                pagination-type="fraction" navigation="true">
+
+            <!--Obrisao sam atribute da se paginacija ne vidi
+                pagination="true"
+                pagination-type="fraction" -->
+
+            <swiper-container id="mySwiper" class="mySwiper-our-products" slides-per-view="3" centered-slides="false" space-between="30" navigation="true">
                 <swiper-slide class="swiper-our-products">
                     <div class="our-products-image-container-box">
                         <img class="image-our-product" src="./images/our-products-1.png" alt="An example PNG image">
