@@ -30,12 +30,12 @@ function toggleSwitchMode(){
 
     function enableDarkMode() {
       body.classList.add('dark-mode');
-      headerBoxLogoAndLanguage.classList.add('dark-mode');
+      // headerBoxLogoAndLanguage.classList.add('dark-mode'); /* ne mora ovako svaki posebno, izgleda je dosta na body sto ima classList. Proveriti posle zasto tako radi tacno!!! */ 
     }
 
     function disableDarkMode() {
       body.classList.remove('dark-mode');
-      headerBoxLogoAndLanguage.classList.remove('dark-mode');
+      // headerBoxLogoAndLanguage.classList.remove('dark-mode');
     }
 
 }

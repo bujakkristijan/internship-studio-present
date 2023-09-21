@@ -195,6 +195,8 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --header-background-color: #D9D9D9;
+    --description-text-color: #474747;
+    --title-text-color: #303030;
     
 }
 
@@ -205,6 +207,9 @@
     /* --background: rgb(73, 73, 73);
     --color: red; */
     --header-background-color: #646464;
+    --description-text-color: rgb(207, 207, 207);
+    --title-text-color: white;
+    
 }
 
 /* Apply colors to elements */
@@ -218,6 +223,14 @@ body {
 } */
 #header-logo-language{
     background-color: var(--header-background-color);
+}
+
+.tab-description{
+    color: var(--description-text-color);
+}
+
+.title-more-about-us{
+    color: var(--title-text-color);
 }
 
 /***************** SWITCH TOGGLE END *********************************/
@@ -423,7 +436,7 @@ body {
 }
 
 .title-more-about-us{
-    color: #303030;
+    /* color: #303030; */
     font-size: 42px;
     font-weight: 700;
 }
@@ -438,7 +451,7 @@ body {
 
 .subtitle-more-about-us{
     font-family: 'Inter';
-    color: #474747;
+    color: var(--description-text-color);
     font-weight: 400;
     font-size: 28px;
     margin-bottom: 38px;
@@ -458,7 +471,7 @@ body {
 .description-more-about-us{
     font-size: 14px;
     font-weight: 400;
-    color: #474747;
+    color: var(--description-text-color);
     margin-top: 38px;
     margin-bottom: 38px;
     line-height: 1.9; /* ovako kad stavim, tacno u ravni button bude sa slikom, mada postoji bolji nacin da se uradi */
@@ -701,6 +714,13 @@ body {
 }
 
 /************* MOBILE SCREEN SIZE DVG NUMBERS CONTAINER *************/
+
+@media(max-width: 1180px){
+    .numbers-box-container{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
 
 @media(max-width: 900px){
     .dvg-numbers-image-container{
@@ -1129,7 +1149,7 @@ body {
 
 /************* MOBILE SCREEN SIZE OUR FOOTER CONTAINER *************/
 
-@media(max-width: 900px){
+@media(max-width: 1180px){
 
     .footer-container{
         height: fit-content;
