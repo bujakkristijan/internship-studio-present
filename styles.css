@@ -124,6 +124,13 @@
 
 /***************** SWITCH TOGGLE START *********************************/
 
+.switch-container{
+    /* posto je justify-content: center, stavim margin-right koliko da bude udaljen od language container-a, i margin-left-auto, da bude skroz sa desne strane pored language container */
+    margin-right: 30px;
+    margin-left: auto;
+
+}
+
 .switch-toggle {
     position: relative;
     display: inline-block;
