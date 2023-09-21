@@ -150,10 +150,10 @@
         position: fixed; /* FIXED SAM DODAO UMESTO ABSOLUTE, nakon ovog nema scroll po x osi, moze i da bude absolute i da je roditelj pozicioniran na primer relative ali pojavi se neki skrol na y osi onda nzm sto*/
         background-color: #dadada;
         height: 100vh; /* da zauzme view height, da je 100% bilo bi 100% od parent elementa*/
-        width: 370px;
+        width: 300px;
         top: 0;
         /* left: -370px; */
-        right: -400px; /* da se ne vidi, toliki mu je i width, pa ga skloni */
+        right: -300px; /* da se ne vidi, toliki mu je i width, pa ga skloni */
         text-align: left;
         z-index: 2; /* da prekrije ostale komponente kada treba da se pojavi*/
         transition: 1s;

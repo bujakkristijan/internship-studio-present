@@ -1,3 +1,7 @@
+const headerBoxTabContainer = document.getElementById("header-box-tab-container");
+
+document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
+
 function updateSlidesPerView() {
     const swiperContainer = document.getElementById("mySwiper");
     const viewportWidth = window.innerWidth;
@@ -16,11 +20,29 @@ function updateSlidesPerView() {
   window.addEventListener("resize", updateSlidesPerView);
 
   function showMenu() {
-    const headerBoxTabContainer = document.getElementById("header-box-tab-container");
+    // const headerBoxTabContainer = document.getElementById("header-box-tab-container");
     headerBoxTabContainer.style.right = "0px";
     headerBoxTabContainer.style.boxShadow = "0 0 0 10000px rgba(0, 0, 0, .50)";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   
+    
+  }
+
+  function hideMenu(){
+    headerBoxTabContainer.style.right = "-300px";
+    headerBoxTabContainer.style.boxShadow = "0 0 0 0 rgba(0,0,0,0)";
+    // document.body.style.overflow = "hidden";
+  }
+
+  let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
+  let xMenuButton = document.getElementById("x-menu-button");
+
+  hamburgerMenuButton.addEventListener('click', showMenu);
+  xMenuButton.addEventListener('click', hideMenu);
+  
+
+  function initializeTabsLanguageIcon(){
+
     // Get the x icon element
     const xIcon = document.querySelector(".fa.fa-times");
   
@@ -54,10 +76,6 @@ function updateSlidesPerView() {
     // Insert the "Language" text container before the language selection container
     headerBoxTabContainer.insertBefore(languageTextContainer, languageMobileContainer);
   }
-
-  let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
-  hamburgerMenuButton.addEventListener('click', showMenu);
-  
   
   
   
