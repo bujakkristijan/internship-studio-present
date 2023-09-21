@@ -1,8 +1,44 @@
 const headerBoxTabContainer = document.getElementById("header-box-tab-container");
+const headerBoxLogoAndLanguage = document.querySelector(".header-box-1");
 let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
 let xMenuButton = document.getElementById("x-menu-button");
 
 document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
+document.addEventListener("DOMContentLoaded", toggleSwitchMode)
+
+function toggleSwitchMode(){
+  const darkModeToggle = document.getElementById('swith-toggle-mode');
+  const body = document.body;
+  let isDarkModeEnabled = false;
+
+    // Check the initial state of the dark mode toggle
+    if (isDarkModeEnabled) {
+      enableDarkMode();
+      darkModeToggle.checked = true;
+    }
+
+    // Toggle dark mode when the switch is clicked
+    darkModeToggle.addEventListener('change', function () {
+      if (this.checked) {
+          enableDarkMode();
+          isDarkModeEnabled = true;
+      } else {
+          disableDarkMode();
+          isDarkModeEnabled = false;
+      }
+    });
+
+    function enableDarkMode() {
+      body.classList.add('dark-mode');
+      headerBoxLogoAndLanguage.classList.add('dark-mode');
+    }
+
+    function disableDarkMode() {
+      body.classList.remove('dark-mode');
+      headerBoxLogoAndLanguage.classList.remove('dark-mode');
+    }
+
+}
 
 function updateSlidesPerView() {
     const swiperContainer = document.getElementById("mySwiper");
