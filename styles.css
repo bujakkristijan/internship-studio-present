@@ -960,10 +960,10 @@ body {
     }
   }
 
-@media screen and (max-width: 900px) {
+@media(max-width: 900px) {
 
     .our-products-name{
-        font-size: 12px;
+        font-size: 22px;
     }
 
 }
