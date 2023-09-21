@@ -31,7 +31,7 @@
 }
 
 .header-box-1{
-    background-color: #D9D9D9;
+    background-color: var(--header-background-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,13 +44,16 @@
     
 }
 
+
 .fa.fa-bars{
     font-size: 36px;
     display: none;
+    /* color: var(--language-text-color); */
 }
 
 .fa.fa-times{
     display: none;
+    color: var(--language-text-color);
 }
 
 
@@ -62,6 +65,7 @@
     padding-left: 6px;
     padding-right: 5px;
     text-decoration: underline;
+    color: var(--language-text-color);
 }
 
 .tab-container{
@@ -107,6 +111,7 @@
     font-weight: 400;
     font-size: 16px;
     white-space: nowrap; /* da ne prelama u novi red */
+    color: var(--title-text-color);
 }
 
 .tab-description{
@@ -119,6 +124,15 @@
 /* za velike ekrane stavim da se ne vidi jezik koji sam naknadno dodao preko js za male ekrane u hamburger menu */
 .language-text-container, .language-mobile-container{
     display: none;
+    
+}
+
+.language-text-container{
+    color: var(--title-text-color);
+}
+
+.language-mobile-container{
+    color: var(--language-text-color);
 }
 
 
@@ -145,11 +159,11 @@
   }
 
   .switch-toggle-input:checked + .slider-toggle {
-    background-color: #2196F3;
+    background-color: #202020;
   }
   
   .switch-toggle-input:focus + .slider-toggle {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #202020;
   }
   
   .switch-toggle-input:checked + .slider-toggle:before {
@@ -197,25 +211,33 @@
     --header-background-color: #D9D9D9;
     --description-text-color: #474747;
     --title-text-color: #303030;
-    
+    --language-text-color: #595959;
+    --our-products-background-color: #F4F4F4;
+    --icon-color: #303030;
+    --hamburger-menu-background-color: #dadada;
+    --swiper-background-color: #ffffff;
 }
 
 /* Dark mode colors */
 .dark-mode {
-    --background-color: #828282;
+    --background-color: #4c4c4c;
     --text-color: #ffffff;
     /* --background: rgb(73, 73, 73);
     --color: red; */
-    --header-background-color: #646464;
+    --header-background-color: #3a3a3a;
     --description-text-color: rgb(207, 207, 207);
     --title-text-color: white;
-    
+    --language-text-color: rgb(207, 207, 207);
+    --our-products-background-color: #4c4c4c;
+    --icon-color: rgb(207, 207, 207);
+    --hamburger-menu-background-color: #4c4c4c;
+    --swiper-background-color: (207, 207, 207);
 }
 
 /* Apply colors to elements */
 body {
     background-color: var(--background-color);
-    color: var(--text-color) ;
+    /* color: var(--text-color) ; */
 }
 /* 
 #header-logo-language {
@@ -278,7 +300,7 @@ body {
         /* position: absolute; */
         /* kad je position: fixed, ne mora cak ni overflow-x: hidden na main-container, nestane skrol i bez toga */
         position: fixed; /* FIXED SAM DODAO UMESTO ABSOLUTE, nakon ovog nema scroll po x osi, moze i da bude absolute i da je roditelj pozicioniran na primer relative ali pojavi se neki skrol na y osi onda nzm sto*/
-        background-color: #dadada;
+        background-color: var(--hamburger-menu-background-color);
         height: 100vh; /* da zauzme view height, da je 100% bilo bi 100% od parent elementa*/
         width: 300px;
         top: 0;
@@ -316,6 +338,7 @@ body {
     .fa.fa-bars{
         display: block;
         margin-right: 24px;
+        color: var(--icon-color);
     }
 
     .fa.fa-times{
@@ -327,6 +350,7 @@ body {
         position: absolute;
         top: 20px;
         left: 20px;
+        color: var(--icon-color);
     }
 
     .language-text-container{
@@ -350,6 +374,17 @@ body {
 
     .language-mobile-text{
         text-decoration: underline;
+    }
+
+    #header-box-tab-container{
+        /* background-color: var(--description-text-color); */
+    }
+    .tab-title{
+        color: var(--title-text-color);
+    }
+
+    .tab-description{
+        color: var(--description-text-color);
     }
 }
 
@@ -584,6 +619,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     padding-top: 12px;
+    color: var(--title-text-color);
 }
 
 .line-offer{
@@ -627,7 +663,7 @@ body {
 .dvg-numbers-title{
     font-weight: 700;
     font-size: 42px;
-    color: #303030;
+    color: var(--title-text-color);
 }
 
 .dvg-numbers-subtitle{
@@ -636,7 +672,7 @@ body {
     font-weight: 400;
     font-size: 28px;
     font-family: 'Inter';
-    color: #474747;
+    color: var(--description-text-color);
 }
 
 .dvg-numbers-text-container{
@@ -741,7 +777,7 @@ body {
 /**************************************************/
 
 .our-products-container{
-    background-color: #F4F4F4;
+    background-color: var(--our-products-background-color);
     /* The padding for your .our-products-container is not affecting the layout as expected because the position: absolute; 
     property is used for the child elements within the .our-products-container. 
     When an element has position: absolute;
@@ -775,6 +811,7 @@ body {
     font-size: 28px;
     line-height: 34px;
     text-align: center;
+    color: var(--title-text-color);
 }
 
 .our-products-description{
@@ -783,6 +820,7 @@ body {
     line-height: 22.4px;
     width: 40%;
     text-align: center;
+    color: var(--description-text-color);
 }
 
 .our-products-title-line{
@@ -809,11 +847,12 @@ body {
 
 .our-products-image-container-box{
     position: relative; /* stavim relative da bih mogao tekst i liniju da stavim absolute i pozicioniram ispod slike */
+    /* color: var(--swiper-background-color); */ /* NE MOZE OVAKO JER JE SLIKA CELA BELA STO JE IMPORTOVANA */
 }
 
 .our-products-name{
     font-family: 'Roboto';
-    font-size: 24px;
+    font-size: 18px;
     line-height: 22px;
     color: #474747;
     font-weight: 400;
@@ -878,13 +917,16 @@ body {
 .swiper-our-products {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    /*background-color: #ffffff; *//* ovde sam malo se zapetljao sa containerima i slikom, pa mora ovako jer je slika u stvari sa slikom proizvoda i belim delom ispod, da je svg drugacije bi */
     display: flex;
     justify-content: center;
     align-items: center;
-
     /* padding: 100px; */ /* da smanji sliku malo, ali moram izbrisati onda za screen size < 900px */
 }
+
+/* .image-our-product{
+    background-color: var(--swiper-background-color);
+} */
 
   swiper-slide img {
     display: block;
@@ -900,22 +942,24 @@ body {
 /************* MOBILE SCREEN SIZE OUR PRODUCTS CONTAINER *************/
 /************ SPECIFIC RESOLUTION *******************************/
 
+
+
 @media screen and (max-width: 1200px){
     .our-products-name{
-        font-size: 20px;
+        font-size: 16px;
     }
   }
 
 @media screen and (max-width: 1000px){
     .our-products-name{
-        font-size: 16px;
+        font-size: 14px;
     }
   }
 
 @media screen and (max-width: 900px) {
 
     .our-products-name{
-        font-size: 16px;
+        font-size: 12px;
     }
 
 }
@@ -939,11 +983,15 @@ body {
 }
 
 .our-brands-title{
-    color: #474747;
+    color: var(--title-text-color);
     font-size: 28px;
     line-height: 34px;
     font-family: 'Inter';
     font-weight: 400; /* vrv ne mora, trebalo bi po defaultu da je 400 vec */
+}
+
+.our-brands-image-title{
+    color: var(--text-color);
 }
 
 .our-brands-title-line{
