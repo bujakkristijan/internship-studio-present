@@ -1,4 +1,6 @@
 const headerBoxTabContainer = document.getElementById("header-box-tab-container");
+let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
+let xMenuButton = document.getElementById("x-menu-button");
 
 document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
 
@@ -34,8 +36,7 @@ function updateSlidesPerView() {
     // document.body.style.overflow = "hidden";
   }
 
-  let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
-  let xMenuButton = document.getElementById("x-menu-button");
+  
 
   hamburgerMenuButton.addEventListener('click', showMenu);
   xMenuButton.addEventListener('click', hideMenu);
@@ -52,16 +53,19 @@ function updateSlidesPerView() {
   
     // Create and append the 'Srpski' div
     const srpskiDiv = document.createElement("div");
+    srpskiDiv.className = "language-mobile-text";
     srpskiDiv.textContent = "Srpski";
     languageMobileContainer.appendChild(srpskiDiv);
   
     // Create and append the 'English' div
     const englishDiv = document.createElement("div");
+    englishDiv.className = "language-mobile-text";
     englishDiv.textContent = "English";
     languageMobileContainer.appendChild(englishDiv);
   
     // Create and append the 'Magyar' div
     const magyarDiv = document.createElement("div");
+    magyarDiv.className = "language-mobile-text";
     magyarDiv.textContent = "Magyar";
     languageMobileContainer.appendChild(magyarDiv);
   
