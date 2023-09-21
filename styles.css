@@ -489,7 +489,7 @@ body {
     color: var(--description-text-color);
     font-weight: 400;
     font-size: 28px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
 }
 
 .line2-more-about-us{
@@ -507,8 +507,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: var(--description-text-color);
-    margin-top: 38px;
-    margin-bottom: 38px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     line-height: 1.9; /* ovako kad stavim, tacno u ravni button bude sa slikom, mada postoji bolji nacin da se uradi */
     
 }
