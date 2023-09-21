@@ -116,6 +116,11 @@
     white-space: nowrap;
 }
 
+/* za velike ekrane stavim da se ne vidi jezik koji sam naknadno dodao preko js za male ekrane u hamburger menu */
+.language-text-container, .language-mobile-container{
+    display: none;
+}
+
 /*************************************************************/
 /************** HAMBURGER MENU ********************/
 /*************************************************************/
@@ -154,7 +159,7 @@
         top: 0;
         /* left: -370px; */
         right: -300px; /* da se ne vidi, toliki mu je i width, pa ga skloni */
-        text-align: left;
+        /* text-align: left; */
         z-index: 2; /* da prekrije ostale komponente kada treba da se pojavi*/
         transition: 1s;
         /* border-left: 2px solid #625731; */
@@ -166,10 +171,13 @@
     .tab-container{
         
         flex-direction: column;
+        width: 100%; /* da linija bude ispod celog container-a */
+        
     }
 
     .tab-container-box{
         border-left: none;
+        border-bottom: 2px solid rgba(53, 53, 53, 0.1);
     }
 
     .tab-box{
@@ -188,7 +196,7 @@
     .fa.fa-times{
         display: block;
         margin: 10px;
-        font-size: 26px;
+        font-size: 34px;
         cursor: pointer;
 
         position: absolute;
@@ -197,12 +205,22 @@
     }
 
     .language-text-container{
-        margin-top: 80px;
-        margin-right: 120px;
+        margin-top: 90px;
+        /* margin-right: 120px; */
+        font-size: 24px;
+        display: flex; /* moze i block, po defaultu je none, pa se mora vratiti */
     }
 
     .language-mobile-container{
         margin-top: 20px;
+        display: flex;
+        /* justify-content: center; */
+        gap: 10px;
+        width: 100%; /* kad stavim width 100%, onda krece od pocetka container-a po defaultu, bez njega je centriran */
+        justify-content: center;
+
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(53, 53, 53, 0.2);
     }
 }
 
