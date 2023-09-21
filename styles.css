@@ -103,7 +103,7 @@
 }
 
 .tab-title{
-    font-family: 'Roboto Condensend';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 16px;
     white-space: nowrap; /* da ne prelama u novi red */
@@ -1093,7 +1093,7 @@ body {
     font-size: 16px;
     line-height: 26px;
     font-weight: 400; /* svakako je vrv po defaultu toliko */
-    font-family: 'Roboto Condesed', 'sans-serif';
+    font-family: 'Roboto Condensed', 'sans-serif';
      /* sans-serif, ako ne uspe da ucita roboto condesed */
      margin-top: 5px;
      margin-bottom: 5px;
