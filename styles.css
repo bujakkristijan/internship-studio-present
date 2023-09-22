@@ -220,16 +220,16 @@
 
 /* Dark mode colors */
 .dark-mode {
-    --background-color: #4c4c4c;
+    /* --background-color: #4c4c4c; */
+    --background-color: #212121;
     --text-color: #ffffff;
-    /* --background: rgb(73, 73, 73);
-    --color: red; */
-    --header-background-color: #3a3a3a;
+    /* --header-background-color: #3a3a3a; */
+    --header-background-color: #999999;
     --description-text-color: rgb(207, 207, 207);
     --title-text-color: white;
-    --language-text-color: rgb(207, 207, 207);
-    --our-products-background-color: #4c4c4c;
-    --icon-color: rgb(207, 207, 207);
+    --language-text-color: rgb(237, 237, 237);
+    --our-products-background-color: #212121;
+    --icon-color: rgb(255, 255, 255);
     --hamburger-menu-background-color: #4c4c4c;
     --swiper-background-color: (207, 207, 207);
 }
@@ -273,6 +273,11 @@ body {
 }
 
 @media(max-width: 900px){
+
+    .swiper-container-banner{
+        margin-top: 80px;
+       
+    }
 
     .image-logo-company{
         height: 38px; /* da se smanji logo malo */
