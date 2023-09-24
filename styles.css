@@ -620,9 +620,39 @@ body {
     gap: 20px;
     padding-top: 4%;
     padding-bottom: 8%;
-
     /* flex-wrap: nowrap; */
 }
+
+.image-main-container{
+    position: relative;
+}
+.image-container:hover{
+    cursor: pointer;
+}
+
+.image-offer {
+    
+    cursor: pointer;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 4px; /* ne znam zasto nece od bottom: 0px da krene od bottom-a same slike, ali ovako bude okej (image-container je veci za 4px od image-offer, nzm sto tacno, proveriti) */
+    left: 0;
+    width: 0%;
+    display: block;
+    margin: auto;
+    height: 10px;
+    background-color: #BF0F0F;
+    transition: 0.2s;
+}
+
+.image-container:hover::after {
+    width: 100%;
+}
+
+
 
 .title-offer{
     font-size: 24px;
@@ -643,6 +673,9 @@ body {
 @media(max-width: 1330px){
     .our-offers-container{
         /* flex-wrap: wrap; */
+    }
+    .image-offer{
+        width: 100%; /* onda zauzme ceo image-container */
     }
 }
 
