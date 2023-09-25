@@ -10,23 +10,15 @@ const ourProductsDescription = document.querySelector('.our-products-description
 const ourBrandsTitle = document.querySelector('.our-brands-title');
 const ourBrandsImageTitle = document.querySelector('.our-brands-image-title');
 
-
-
-
 let hamburgerMenuButton = document.getElementById("hamburger-menu-button");
 let xMenuButton = document.getElementById("x-menu-button");
-
-document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
-document.addEventListener("DOMContentLoaded", toggleSwitchMode)
 
 function toggleSwitchMode(){
   const darkModeToggle = document.getElementById('swith-toggle-mode');
   const body = document.body;
-
   //premestio sam ovde da ne bi u konzoli greske ispisivao jer ne postoje na pocetku, vec se kreiraju preko js-a, mada je radilo okej sve 
   const languageTitleMobile = document.querySelector('.language-text-container');
   const languageTextMobile = document.querySelector('.language-mobile-container');  
-
   let isDarkModeEnabled = false;
 
     // Check the initial state of the dark mode toggle
@@ -61,7 +53,6 @@ function toggleSwitchMode(){
       ourProductsDescription.classList.add('dark-mode');
       ourBrandsTitle.classList.add('dark-mode');
       ourBrandsImageTitle.classList.add('dark-mode');
-      
       // headerBoxLogoAndLanguage.classList.add('dark-mode'); /* ne mora ovako svaki posebno, izgleda je dosta na body sto ima classList. Proveriti posle zasto tako radi tacno!!! */ 
     }
 
@@ -80,10 +71,8 @@ function toggleSwitchMode(){
       ourProductsDescription.classList.remove('dark-mode');
       ourBrandsTitle.classList.remove('dark-mode');
       ourBrandsImageTitle.classList.remove('dark-mode');
-      
       // headerBoxLogoAndLanguage.classList.remove('dark-mode');
     }
-
 }
 
 function updateSlidesPerView() {
@@ -97,19 +86,11 @@ function updateSlidesPerView() {
     }
   }
 
-  // Initial call to set slides-per-view on page load
-  updateSlidesPerView();
-
-  // Listen for window resize events and update slides-per-view
-  window.addEventListener("resize", updateSlidesPerView);
-
   function showMenu() {
     // const headerBoxTabContainer = document.getElementById("header-box-tab-container");
     headerBoxTabContainer.style.right = "0px";
     headerBoxTabContainer.style.boxShadow = "0 0 0 10000px rgba(0, 0, 0, .50)";
     // document.body.style.overflow = "hidden";
-  
-    
   }
 
   function hideMenu(){
@@ -118,52 +99,43 @@ function updateSlidesPerView() {
     // document.body.style.overflow = "hidden";
   }
 
-  
-
-  hamburgerMenuButton.addEventListener('click', showMenu);
-  xMenuButton.addEventListener('click', hideMenu);
-  
-
   function initializeTabsLanguageIcon(){
-
-    // Get the x icon element
     const xIcon = document.querySelector(".fa.fa-times");
   
-    // Create a new child element for language selection
+    // kreiram container gde cu dodavati child elemente za svaki jezik posebno
     const languageMobileContainer = document.createElement("div");
     languageMobileContainer.className = "language-mobile-container";
   
-    // Create and append the 'Srpski' div
+    // kreiram i dodajem element za srpski jezik kao child element na languageMobileContainer
     const srpskiDiv = document.createElement("div");
     srpskiDiv.className = "language-mobile-text";
     srpskiDiv.textContent = "Srpski";
     languageMobileContainer.appendChild(srpskiDiv);
   
-    // Create and append the 'English' div
+    // kreiram i dodajem element za engleski jezik kao child element na languageMobileContainer
     const englishDiv = document.createElement("div");
     englishDiv.className = "language-mobile-text";
     englishDiv.textContent = "English";
     languageMobileContainer.appendChild(englishDiv);
   
-    // Create and append the 'Magyar' div
+    // kreiram i dodajem element za madjarski jezik kao child element na languageMobileContainer
     const magyarDiv = document.createElement("div");
     magyarDiv.className = "language-mobile-text";
     magyarDiv.textContent = "Magyar";
     languageMobileContainer.appendChild(magyarDiv);
   
-    // Insert the language selection container after the x icon
+    // dodajem languageMobileContainer pre xIcon, mada je xIcon position: absolute svakako;
     // nema potrebe xIcon.nextSibling da bude, dovoljno je samo da doda pre xIcon, xIcon je position: absolute svakako da stoji gore u gornjem desnom cosku od header-box-2, koji je position: fixed, pa na osnovu njega se pozicionira tacno 
     headerBoxTabContainer.insertBefore(languageMobileContainer, xIcon);
   
-    // Create the "Language" text container element
+    // kreiram languageTextContainer koji ce biti prvi, odnosno pre container-a sa jezicima koji su dodati kao child elementi
     const languageTextContainer = document.createElement("div");
     languageTextContainer.className = "language-text-container";
     languageTextContainer.textContent = "JEZIK";
   
-    // Insert the "Language" text container before the language selection container
+    // stavljam languageTextContainer pre languageMobileContainer
     headerBoxTabContainer.insertBefore(languageTextContainer, languageMobileContainer);
   }
-
 
   function popupMessage() {
     // Set timeout for displaying popup
@@ -179,7 +151,19 @@ function updateSlidesPerView() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
+document.addEventListener("DOMContentLoaded", toggleSwitchMode);
 document.addEventListener("DOMContentLoaded", popupMessage);
+
+hamburgerMenuButton.addEventListener('click', showMenu);
+xMenuButton.addEventListener('click', hideMenu);
+
+// Listen for window resize events and update slides-per-view
+window.addEventListener("resize", updateSlidesPerView);
+
+// Initial call to set slides-per-view on page load
+updateSlidesPerView();
+
   
   
   

@@ -1,0 +1,1371 @@
+/* In SCSS, once you define a variable, its value is set and remains constant throughout the stylesheet. 
+Variables are not meant to be changed dynamically within the stylesheet 
+itself based on conditions like dark mode or light mode. */
+/* ne moze da se menja vrednost varijabli definisane pomocu $ kao sto sam mislio za dark/light mode */
+:root{
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background-color: #D9D9D9;
+    --description-text-color: #474747;
+    --title-text-color: #303030;
+    --language-text-color: #595959;
+    --our-products-background-color: #F4F4F4;
+    --icon-color: #303030;
+    --hamburger-menu-background-color: #dadada;
+    --swiper-background-color: #ffffff;
+    --language-hover-color: #888787;
+}
+
+.dark-mode {
+    --background-color: #212121;
+    --text-color: #ffffff;
+    --header-background-color: #999999;
+    --description-text-color: rgb(207, 207, 207);
+    --title-text-color: white;
+    --language-text-color: rgb(237, 237, 237);
+    --our-products-background-color: #212121;
+    --icon-color: rgb(255, 255, 255);
+    --hamburger-menu-background-color: #4c4c4c;
+    --swiper-background-color: (207, 207, 207);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body{
+    overflow-x: hidden; /* mislim da ne treba ipak ovo za scroll da se ne pojavljuje, svakako ga nema sad kako sam namestio da je responisve sve */
+    background-color: var(--background-color);
+  }
+
+
+/*************************************************************/
+/************** POPUP CONTAINER START ********************/
+/*************************************************************/
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    /* z-index: 1; */
+}
+
+.popup-content {
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('./images/distribution-image.png'); 
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    width: 650px;
+    height: 400px;
+
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    
+}
+
+.popup-title{
+    margin-top: 50px; 
+}
+
+.popup-description{
+    margin-top: 60px; 
+    color: black;
+    z-index: 5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media(max-width: 900px){
+    .popup-content{
+        width: 300px;
+    }
+
+    .popup-description{
+        margin-top: 20px;
+    }
+}
+
+/*************************************************************/
+/************** POPUP CONTAINER END ********************/
+/*************************************************************/
+
+
+/*************************************************************/
+/************** HEADER WITH BANNER SLIDER ********************/
+/*************************************************************/
+
+.header-with-image-container{
+    /* height: 100vh; */ /* zauzme prostor slika i za more-about-us-container, bolje staviti da zauzme 80vh mozda a header 20vh */
+}
+
+.header{
+    /* width: 100vw; */
+    max-height: 143px;
+    /* background-color: aqua; */
+}
+
+.header-box-2{
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-box-1{
+    background-color: var(--header-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 105px;
+    
+}
+
+
+.fa.fa-bars{
+    font-size: 36px;
+    display: none;
+    /* color: var(--language-text-color); */
+}
+
+.fa.fa-times{
+    display: none;
+    color: var(--language-text-color);
+}
+
+
+.language-container{
+    padding-right: 105px;
+}
+
+.language-label{
+    padding-left: 6px;
+    padding-right: 5px;
+    text-decoration: underline;
+    color: var(--language-text-color);
+}
+
+
+.language-label:hover{
+    color: var(--language-hover-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tab-container{
+    display: flex;
+    /* justify-content: center;
+    align-items: center !important;
+    text-align: center; */
+    height: 100%;
+}
+
+.tab-container-box{
+    /* height: 100%; */
+    border-left: 0.5px solid #88878766;
+    flex: 1;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+
+.tab-container-box:hover{
+    cursor: pointer;
+}
+
+.tab-box{
+    /* padding: 42px; */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    /* border-left: 0.5px solid #88878766; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+}
+
+.tab-box.contact{
+    border-right: 0.5px solid #88878766;
+}
+
+.tab-title{
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap; /* da ne prelama u novi red */
+    color: var(--title-text-color);
+}
+
+.tab-description{
+    font-family: 'Roboto';
+    color: #474747;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* za velike ekrane stavim da se ne vidi jezik koji sam naknadno dodao preko js za male ekrane u hamburger menu */
+.language-text-container, .language-mobile-container{
+    display: none;
+    
+}
+
+.language-text-container{
+    color: var(--title-text-color);
+}
+
+.language-mobile-container{
+    color: var(--language-text-color);
+}
+
+
+/***************** SWITCH TOGGLE START *********************************/
+
+.switch-container{
+    /* posto je justify-content: center, stavim margin-right koliko da bude udaljen od language container-a, i margin-left-auto, da bude skroz sa desne strane pored language container */
+    margin-right: 30px;
+    margin-left: auto;
+
+}
+
+.switch-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch-toggle-input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .switch-toggle-input:checked + .slider-toggle {
+    background-color: #202020;
+  }
+  
+  .switch-toggle-input:focus + .slider-toggle {
+    box-shadow: 0 0 1px #202020;
+  }
+  
+  .switch-toggle-input:checked + .slider-toggle:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+.slider-toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider-toggle:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+#header-logo-language{
+    background-color: var(--header-background-color);
+}
+
+.tab-description{
+    color: var(--description-text-color);
+}
+
+.title-more-about-us{
+    color: var(--title-text-color);
+}
+
+/***************** SWITCH TOGGLE END *********************************/
+
+
+/*************************************************************/
+/************** HAMBURGER MENU ********************/
+/*************************************************************/
+
+@media(max-width: 1330px){
+    .tab-box{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .swiper-slide-next{
+        display: none;
+    }
+}
+
+@media(max-width: 900px){
+
+    .swiper-container-banner{
+        margin-top: 80px;
+       
+    }
+
+    .image-logo-company{
+        height: 38px; /* da se smanji logo malo */
+    }
+
+    .language-container{
+        display: none;
+    }
+
+    .logo-container{
+        padding-left: 20px;
+    }
+
+    .header-box-1{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .header-box-2{
+        /* display: none; */
+        /* position: absolute; */
+        /* kad je position: fixed, ne mora cak ni overflow-x: hidden na main-container, nestane skrol i bez toga */
+        position: fixed; /* FIXED SAM DODAO UMESTO ABSOLUTE, nakon ovog nema scroll po x osi, moze i da bude absolute i da je roditelj pozicioniran na primer relative ali pojavi se neki skrol na y osi onda nzm sto*/
+        background-color: var(--hamburger-menu-background-color);
+        height: 100vh; /* da zauzme view height, da je 100% bilo bi 100% od parent elementa*/
+        width: 300px;
+        top: 0;
+        /* left: -370px; */
+        right: -300px; /* da se ne vidi, toliki mu je i width, pa ga skloni */
+        /* text-align: left; */
+        z-index: 2; /* da prekrije ostale komponente kada treba da se pojavi*/
+        transition: 1s;
+        /* border-left: 2px solid #625731; */
+        /* display: flex;
+        flex-direction: column; */
+        flex-direction: column;
+    }
+
+    .tab-container{
+        
+        flex-direction: column;
+        width: 100%; /* da linija bude ispod celog container-a */
+        
+    }
+
+    .tab-container-box{
+        border-left: none;
+        border-bottom: 2px solid rgba(53, 53, 53, 0.1);
+    }
+
+    .tab-box{
+        padding: 0;
+    }
+
+    .tab-box.contact{
+        border-right: none;
+    }
+
+    .fa.fa-bars{
+        display: block;
+        margin-right: 24px;
+        color: var(--icon-color);
+    }
+
+    .fa.fa-times{
+        display: block;
+        margin: 10px;
+        font-size: 34px;
+        cursor: pointer;
+
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: var(--icon-color);
+    }
+
+    .language-text-container{
+        margin-top: 90px;
+        /* margin-right: 120px; */
+        font-size: 24px;
+        display: flex; /* moze i block, po defaultu je none, pa se mora vratiti */
+    }
+
+    .language-mobile-container{
+        margin-top: 20px;
+        display: flex;
+        /* justify-content: center; */
+        gap: 10px;
+        width: 100%; /* kad stavim width 100%, onda krece od pocetka container-a po defaultu, bez njega je centriran */
+        justify-content: center;
+
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgba(53, 53, 53, 0.3);
+    }
+
+    .language-mobile-text{
+        text-decoration: underline;
+    }
+
+    #header-box-tab-container{
+        /* background-color: var(--description-text-color); */
+    }
+    .tab-title{
+        color: var(--title-text-color);
+    }
+
+    .tab-description{
+        color: var(--description-text-color);
+    }
+}
+
+
+
+/*************************************************************/
+/************** SWIPER FOR BANNER ********************/
+/*************************************************************/
+
+
+/* bude dobro i bez ovoga */
+.swiper-container-banner{
+    /* width: 100%;
+    height: 100%; */
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+.swiper-slide-banner{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* bude dobro i bez ovoga */
+.swiper-banner-image{
+    display: block;
+    width: 100%;
+    /* height: 100%;  */
+    /* height: 100%; */
+    object-fit: cover;
+    
+    /* proveriti kako namestiti Video.png kad je ubacen da je velicina ista, tj sve da budu iste !!! */
+    /* min-height: 220px; */
+
+    /* max-height: 714px; *//* ako hocu sve slike da mi budu jednake, npr Video.png nije ista po visini, pa sa ovim svima zadam istu visinu i object-fit:cover je razvuce da popuni da su sve iste onda, ali onda treba resiti za mobile screen size jer ne moze tako da bude, ne vidi se lepo*/
+    /* min-height: 350px; *//* zadao bi min-height i za telefone  da budu svi isti */
+    max-height: 714px;
+  }
+
+  
+
+
+/*************************************************************/
+/*********** END OF SWIPER FOR BANNER *************************/
+/*************************************************************/
+
+
+.slider-image-container{
+    /* width: 100%; */
+    /* height: 100%; */ /* ne znam zasto ali bez ovoga radi dobro, proveriti posle */
+    /* position: relative; */
+}
+/* .image-video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: -22;
+} */
+
+.image-arrow-down{
+    position: absolute;
+    z-index: 2;
+    bottom: 40px; /* mozda bi trebalo top main-container-a, mada nije naznaceno kako da se pozicionira u figmi */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/********************************************************************/
+/* MORE ABOUT US CONTAINER */
+/********************************************************************/
+
+.more-about-us-container{
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 60px;
+}
+
+.more-about-us-box-container{
+    /* flex: 1; */
+    width: 50%;
+    height: 100%;
+    
+}
+
+.image-more-about-us{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title-more-about-us{
+    /* color: #303030; */
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.line1-more-about-us{
+    background-color: #BF0F0F;
+    height: 6px;
+    width: 137px;
+    margin-top: 20px;
+    margin-bottom: 38px;
+}
+
+.subtitle-more-about-us{
+    font-family: 'Inter';
+    color: var(--description-text-color);
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 36px;
+}
+
+.line2-more-about-us{
+    height: 3px;
+    background-color: #C4C4C466;
+    width: 100%;
+}
+
+.more-about-us-box-container.text-box{
+    padding-right: 120px;
+    padding-top: 38px;
+}
+
+.description-more-about-us{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--description-text-color);
+    margin-top: 36px;
+    margin-bottom: 36px;
+    line-height: 1.9; /* ovako kad stavim, tacno u ravni button bude sa slikom, mada postoji bolji nacin da se uradi */
+    
+}
+
+.button-more-about-us{
+    background-color: #BF0F0F;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #BF0F0F;
+    border-radius: 4px;
+}
+
+.button-more-about-us:hover{
+    cursor: pointer;
+}
+
+/********************************************************************/
+/*************** MOBILE SCREEN SIZE MORE ABOUT US CONTAINER *************/
+/********************************************************************/
+
+@media(max-width: 900px){
+    .more-about-us-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 90%; */
+    }
+
+    .more-about-us-box-container{
+        width: 80%;
+    }
+
+    .more-about-us-box-container.text-box{
+        padding-right: 0px;
+        padding-top: 0px;
+        width: 80%;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+}
+
+/********************************************************/
+/** DISTRIBUTION CONTAINER **/
+/********************************************************/
+
+.image-distribution-container{
+    /* width: 100vw; */
+    width: 100%;
+    height: 650px; /* koliko god height da zadam, lepo ce se prilagoditi slika, nece se poremetiti i razvuci da izgleda neprirodno */
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url('./images/distribution-image.png'); 
+    background-position: center;
+    background-size: cover;
+
+     /*parallax scrolling effect */
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.distribution-text{
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 34px;
+
+    letter-spacing: 8px;
+}
+
+.distribution-text::after{
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #BF0F0F;
+    width: 160px;
+
+    margin-top: 16px;
+    /* preko margina centriram liniju */
+    margin-left: auto; /* Horizontal centering */
+    margin-right: auto; /* Horizontal centering */
+    
+}
+
+/************* MOBILE SCREEN SIZE DISTRIBUTION CONTAINER *************/
+
+@media(max-width: 900px){
+    .distribution-text{
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
+
+/********************************************************/
+/** OUR OFFERS CONTAINER **/
+/**********************************************************/
+
+.our-offers-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    /* flex-wrap: nowrap; */
+}
+
+.image-main-container{
+    position: relative;
+}
+.image-container:hover{
+    cursor: pointer;
+}
+
+.image-offer {
+    
+    cursor: pointer;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 4px; /* ne znam zasto nece od bottom: 0px da krene od bottom-a same slike, ali ovako bude okej (image-container je veci za 4px od image-offer, nzm sto tacno, proveriti) */
+    /* ako hocu da krece od sredine i da ide ka krajevima */
+    /* left: 50%; */ /* Set the starting position to the middle */
+    /* transform: translateX(-50%); */ /* Center the element horizontally */
+    width: 0%;
+    display: block;
+    /* margin: auto; */
+    height: 10px;
+    background-color: #BF0F0F;
+    transition: 0.3s;
+}
+
+.image-container:hover::after {
+    width: 100%;
+}
+
+
+
+.title-offer{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 12px;
+    color: var(--title-text-color);
+}
+
+.line-offer{
+    background-color: #BF0F0F;
+    height: 2px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+/************* MOBILE SCREEN SIZE OUR OFFERS CONTAINER *************/
+
+@media(max-width: 1330px){
+    .our-offers-container{
+        /* flex-wrap: wrap; */
+    }
+    .image-offer{
+        width: 100%; /* onda zauzme ceo image-container */
+    }
+}
+
+
+@media(max-width: 1330px){
+    .our-offers-container{
+        flex-direction: column; 
+        /* flex-wrap: nowrap; */
+        /* display: flex; */
+    }
+    .our-offers-box-container{
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+
+        /* width: 90%; */
+        
+    }
+}
+
+
+
+/**************************************************/
+/** DVG NUMBERS CONTAINER **/
+/**************************************************/
+
+.dvg-numbers-title{
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--title-text-color);
+}
+
+.dvg-numbers-subtitle{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: 'Inter';
+    color: var(--description-text-color);
+}
+
+.dvg-numbers-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.dvg-numbers-line{
+    /* margin-top: 20px; */
+    background-color: #BF0F0F;
+    height: 6px;
+    width: 137px;
+}
+
+.dvg-numbers-cover{
+    width: 100%;
+    height: 345px;
+}
+
+
+/* umesto slike direktno u html-u, dodata je kao background na container */
+.dvg-numbers-image-container{
+    width: 100%;
+    height: 345px;
+    background-image: url('./images/dvg-numbers-cover.png');
+    background-size: cover; /* This scales the background image to cover the entire container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image horizontally and vertically */
+
+    display: flex;
+    /* justify-content: space-around; */ /* nisam stavio space-around jer ne mogu lepo vertikalne linije da se nameste, pa mi je lakse sa 'center' i padding u .numbers-box-container */
+    justify-content: center;
+    align-items: center;
+
+    /* padding-left: 8%;
+    padding-right: 8%; */
+
+}
+
+.numbers-value{
+    color: white;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 34px;
+}
+
+.numbers-description{
+    color: white;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.numbers-box-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ /* radi isto kao i text-align u ovom slucaju */
+    text-align: center; 
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    border-right: 1px solid grey;
+
+    gap: 10px; /* razmak izmedju, flex direction je column pa je razmak po vertikali */
+}
+
+.numbers-box-container.last-box{
+    border-right: none;
+}
+
+/************* MOBILE SCREEN SIZE DVG NUMBERS CONTAINER *************/
+
+@media(max-width: 1180px){
+    .numbers-box-container{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media(max-width: 900px){
+    .dvg-numbers-image-container{
+        flex-direction: column;
+    }
+
+    .dvg-numbers-image-container{
+        height: fit-content; /* OVO RESAVA PROBLEM DA BUDE SLIKA PREKO CELOG CONTAINER-A I ZA MOBILR SCREEN SIZE */
+    }
+
+    .numbers-box-container{
+        border-right: none;
+    }
+}
+
+/**************************************************/
+/** OUR PRODUCTS CONTAINER **/
+/**************************************************/
+
+.our-products-container{
+    background-color: var(--our-products-background-color);
+    /* The padding for your .our-products-container is not affecting the layout as expected because the position: absolute; 
+    property is used for the child elements within the .our-products-container. 
+    When an element has position: absolute;
+    , it is taken out of the normal document flow, 
+    which means it won't be affected by the padding of its parent container.*/
+    padding-top: 70px;
+    padding-bottom: 70px;
+    /* padding-left: 36px;
+    padding-right: 36px; */
+    display: flex;
+    flex-direction: column;
+    /* The issue you're experiencing with the .our-products-title-line not being 
+    centered within its parent container despite using justify-content: center;
+    on the parent is likely due to the fact that justify-content primarily works for aligning flex items along the main axis,
+    which is horizontal in this case because you've used flex-direction: column;.*/
+    align-items: center;
+    /* width: 100%; */
+    gap: 40px; /* razmak izmedju flex items-a */
+}
+
+.our-products-text-main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center; /* MORA ALIGN ITEMS ZATO STO JE FLEX DIRECTION COLUMN!!! */
+    gap: 40px;
+}
+
+.our-products-title{
+    font-family: 'Inter';
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.our-products-description{
+    text-align: center;
+    font-size: 14px;
+    line-height: 22.4px;
+    width: 40%;
+    text-align: center;
+    color: var(--description-text-color);
+}
+
+.our-products-title-line{
+    height: 3px;
+    width: 40%;
+    background-color:#C4C4C466;
+    text-align: center;
+}
+
+.our-products-image-main-container{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.our-products-image-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.our-products-image-container-box{
+    position: relative; /* stavim relative da bih mogao tekst i liniju da stavim absolute i pozicioniram ispod slike */
+    /* color: var(--swiper-background-color); */ /* NE MOZE OVAKO JER JE SLIKA CELA BELA STO JE IMPORTOVANA */
+}
+
+.our-products-name{
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 22px;
+    color: #474747;
+    font-weight: 400;
+
+    position: absolute; 
+    top: 75%; /* pozicionira se u odnosu na gornju ivicu parent container-a, odnosno slike jer slika zauzima ceo container*/
+    /* left: 8%; */ /* ne treba vise, kako sam slajder stavio */
+
+    left: 50%; /* Move the element to the horizontal center of its parent */
+    transform: translateX(-50%); /* Center the element horizontally */
+    white-space: nowrap;
+}
+
+.our-products-name::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 53px;
+    background-color: #BF0F0F;
+    margin-top: 10px;
+}
+
+.our-products-line{
+    height: 2px;
+    background-color: #BF0F0F;
+    width: 53px;
+
+    position: absolute;
+    top: 85%;
+    left: 8%;
+    
+}
+
+.our-products-line.special{
+    height: 2px !important; /* kad stavim 2, bude malo deblja nego na .our-products-line, nzm sto */
+    top: 91% !important;
+}
+
+/************* MOBILE SCREEN SIZE OUR PRODUCTS CONTAINER *************/
+
+@media(max-width: 900px){
+    .our-products-description{
+        width: 70%;
+    }
+}
+
+
+/******** SWIPER OUR PRODUCTS START ******/
+
+.mySwiper-our-products {
+    width: 100%;
+    /* height: 100%; */
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+    /* width: 100%; */
+    height: 350px;
+    margin: 20px auto;
+  }
+
+.swiper-our-products {
+    text-align: center;
+    font-size: 18px;
+    /*background-color: #ffffff; *//* ovde sam malo se zapetljao sa containerima i slikom, pa mora ovako jer je slika u stvari sa slikom proizvoda i belim delom ispod, da je svg drugacije bi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px; */ /* da smanji sliku malo, ali moram izbrisati onda za screen size < 900px */
+}
+
+/* .image-our-product{
+    background-color: var(--swiper-background-color);
+} */
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+   /* object-fit: contain; */ /* stavljam contain da bi se lepo videla cela slike */
+  }
+
+  /******** SWIPER OUR PRODUCTS END ******/
+
+/************* MOBILE SCREEN SIZE OUR PRODUCTS CONTAINER *************/
+/************ SPECIFIC RESOLUTION *******************************/
+
+
+
+@media screen and (max-width: 1200px){
+    .our-products-name{
+        font-size: 16px;
+    }
+  }
+
+@media screen and (max-width: 1000px){
+    .our-products-name{
+        font-size: 14px;
+    }
+  }
+
+@media(max-width: 900px) {
+
+    .our-products-name{
+        font-size: 16px;
+    }
+
+}
+
+/**************************************************/
+/** OUR BRANDS CONTAINER **/
+/**************************************************/
+
+.our-brands-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+    
+}
+
+.our-brands-image-main-container{
+    display: flex;
+}
+
+.our-brands-title{
+    color: var(--title-text-color);
+    font-size: 28px;
+    line-height: 34px;
+    font-family: 'Inter';
+    font-weight: 400; /* vrv ne mora, trebalo bi po defaultu da je 400 vec */
+}
+
+.our-brands-image-title{
+    color: var(--text-color);
+}
+
+.our-brands-title-line{
+    height: 3px;
+    width: 40%;
+    background-color:#C4C4C466;
+    text-align: center;
+}
+
+.our-brands-text-main-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center; /* MORA ALIGN ITEMS ZATO STO JE FLEX DIRECTION COLUMN!!! */
+    gap: 40px;
+    padding-bottom: 40px;
+    
+}
+
+.our-brands-image-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.our-brands-image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-all-brands-container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.button-all-brands{
+    background-color: #BF0F0F;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #BF0F0F;
+    border-radius: 4px;
+}
+
+/************* MOBILE SCREEN SIZE OUR BRANDS CONTAINER *************/
+
+@media(max-width: 900px){
+    .our-brands-image-main-container{
+        flex-direction: column;
+    }
+
+    .our-brands-title{
+        /* font-size: 28px; */
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/**************************************************/
+/** FOOTER CONTAINER **/
+/**************************************************/
+
+
+.footer-container{
+    
+        width: 100%;
+        height: 383px;
+        background-image: url('./images/footer-background-image.png');
+        background-size: cover; /* This scales the background image to cover the entire container */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        background-position: center; /* Center the background image horizontally and vertically */
+
+        display: flex;
+        flex-direction: column;
+}
+
+.footer-contact-title{
+    color: white;
+    font-family: 'Inter';
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+}
+.footer-big-row-container{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center; /* ovako mozda lakse postignem kako treba po izgledu u figmi da bude, posle dodam padding na svaki box koliko treba */
+    padding-top: 60px; 
+    padding-left: 60px;
+    padding-right: 60px;
+
+    /* gap: 60px; */
+
+    flex-grow: 0;  /* Prevent this container from growing */
+
+    margin-bottom: 20px; /* da odvoji ceo container od small containera koji je zamracen */
+}
+
+.footer-contact-box-img-text-container{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-row-box-container{
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 140px;
+    padding-left: 40px;
+    border-right: 1px rgba(255, 255, 255, 0.26) solid; /* dodam opaciti na border, da se providi */
+}
+
+.footer-row-box-container.last{
+    border-right: none; /* skidam border sa poslednjeg */
+}
+
+.footer-contact-box-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 220px; /* setujem max-width da bi se deo teksta prelomio u novi red kao sto je u figmi tacno */
+    margin-top: 10px;
+}
+
+.footer-contact-text{
+    /* font-family: 'Roboto'; */
+    font-size: 14px;
+    line-height: 22.4px;
+    color: white;
+}
+
+.footer-socials-text{
+    font-size: 14px;
+    line-height: 26px;
+    color: white;
+}
+
+.footer-tab-text{
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400; /* svakako je vrv po defaultu toliko */
+    font-family: 'Roboto Condensed', 'sans-serif';
+     /* sans-serif, ako ne uspe da ucita roboto condesed */
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+
+.footer-socials-logo-container{
+    margin-top: 20px;
+}
+
+.image-footer-social-logo{
+    margin-right: 8px;
+}
+
+
+/***** FOOTER SMALL ROW CONTAINER ****/
+
+.footer-small-row-container{
+    background-color: rgba(0, 0, 0, 0.33);
+    flex-grow: 1; /* Grow to take up available space */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-small-row-box-container{
+    /* height: 100%; */
+   
+}
+
+.footer-small-row-box-text{
+    color: white;
+    opacity: 0.3;
+    font-size: 14px;
+    line-height: 19.32px;
+    font-family: 'Roboto';
+    /* padding-top: 12px;
+    padding-bottom: 12px; */
+
+}
+
+.footer-small-row-box-text.underlined{
+    text-decoration: underline;
+}
+
+.footer-small-row-box-text.with-parts{
+    display: flex;
+}
+
+.footer-small-row-text-part-2{
+    text-decoration: underline;
+}
+
+/************* MOBILE SCREEN SIZE OUR FOOTER CONTAINER *************/
+
+@media(max-width: 1180px){
+
+    .footer-container{
+        height: fit-content;
+    }
+
+    .footer-row-box-container{
+        border-right: none;
+        padding: 0;
+    }
+
+    .footer-big-row-container{
+        flex-direction: column;
+        align-items: center; /* smanji se i logo uz pomoc ovog, nzm sto, ali treba svakako da se smanji */
+    }
+
+    .footer-small-row-container{
+        flex-direction: column;
+    }
+
+    .footer-contact-title{
+        margin-top: 30px;
+    }
+
+    .footer-row-box-container.tabs{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-socials-text{
+        text-align: center;
+    }
+
+    .footer-small-row-box-text{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* .image-footer-logo{
+        height: 100px;
+        width: 59px;
+    } */
+}
