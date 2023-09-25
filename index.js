@@ -152,7 +152,7 @@ function updateSlidesPerView() {
     languageMobileContainer.appendChild(magyarDiv);
   
     // Insert the language selection container after the x icon
-    // nema potrebe xIcon.nextSibling da bude, dovoljno je samo da doda pre xIcon, xIcon je position: absolut svakako da stoji gore u gornjem desnom cosku od header-box-2, koji je position: fixed, pa na osnovu njega se pozicionira tacno 
+    // nema potrebe xIcon.nextSibling da bude, dovoljno je samo da doda pre xIcon, xIcon je position: absolute svakako da stoji gore u gornjem desnom cosku od header-box-2, koji je position: fixed, pa na osnovu njega se pozicionira tacno 
     headerBoxTabContainer.insertBefore(languageMobileContainer, xIcon);
   
     // Create the "Language" text container element
@@ -163,6 +163,23 @@ function updateSlidesPerView() {
     // Insert the "Language" text container before the language selection container
     headerBoxTabContainer.insertBefore(languageTextContainer, languageMobileContainer);
   }
+
+
+  function popupMessage() {
+    // Set timeout for displaying popup
+    setTimeout(function () {
+        document.getElementById("popup").style.display = "block";
+        document.body.style.overflow = "hidden"; // Disable scrolling
+    }, 5000); 
+
+    // Close popup when close button is clicked
+    document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("popup").style.display = "none";
+        document.body.style.overflow = "auto"; // Enable scrolling
+    });
+}
+
+document.addEventListener("DOMContentLoaded", popupMessage);
   
   
   
