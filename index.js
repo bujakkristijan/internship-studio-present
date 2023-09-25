@@ -152,12 +152,13 @@ function updateSlidesPerView() {
     languageMobileContainer.appendChild(magyarDiv);
   
     // Insert the language selection container after the x icon
-    headerBoxTabContainer.insertBefore(languageMobileContainer, xIcon.nextSibling);
+    // nema potrebe xIcon.nextSibling da bude, dovoljno je samo da doda pre xIcon, xIcon je position: absolut svakako da stoji gore u gornjem desnom cosku od header-box-2, koji je position: fixed, pa na osnovu njega se pozicionira tacno 
+    headerBoxTabContainer.insertBefore(languageMobileContainer, xIcon);
   
     // Create the "Language" text container element
     const languageTextContainer = document.createElement("div");
     languageTextContainer.className = "language-text-container";
-    languageTextContainer.textContent = "Language";
+    languageTextContainer.textContent = "JEZIK";
   
     // Insert the "Language" text container before the language selection container
     headerBoxTabContainer.insertBefore(languageTextContainer, languageMobileContainer);

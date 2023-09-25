@@ -68,6 +68,13 @@
     color: var(--language-text-color);
 }
 
+
+.language-label:hover{
+    color: var(--language-hover-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .tab-container{
     display: flex;
     /* justify-content: center;
@@ -84,6 +91,10 @@
     /* align-items: center; */
     justify-content: center;
     text-align: center;
+}
+
+.tab-container-box:hover{
+    cursor: pointer;
 }
 
 .tab-box{
@@ -216,6 +227,7 @@
     --icon-color: #303030;
     --hamburger-menu-background-color: #dadada;
     --swiper-background-color: #ffffff;
+    --language-hover-color: #888787;
 }
 
 /* Dark mode colors */
@@ -639,13 +651,15 @@ body {
     content: "";
     position: absolute;
     bottom: 4px; /* ne znam zasto nece od bottom: 0px da krene od bottom-a same slike, ali ovako bude okej (image-container je veci za 4px od image-offer, nzm sto tacno, proveriti) */
-    left: 0;
+    /* ako hocu da krece od sredine i da ide ka krajevima */
+    /* left: 50%; */ /* Set the starting position to the middle */
+    /* transform: translateX(-50%); */ /* Center the element horizontally */
     width: 0%;
     display: block;
-    margin: auto;
+    /* margin: auto; */
     height: 10px;
     background-color: #BF0F0F;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .image-container:hover::after {
