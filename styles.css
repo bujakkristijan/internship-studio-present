@@ -23,11 +23,12 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    /* z-index: 1; */
 }
 
 .popup-content {
 
-    background-image: url('./images/distribution-image.png'); 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('./images/distribution-image.png'); 
     background-position: center;
     background-size: cover;
 
@@ -55,7 +56,9 @@
 }
 
 .popup-description{
-    margin-top: 80px; 
+    margin-top: 60px; 
+    color: black;
+    z-index: 5;
 }
 
 .close-btn {
@@ -69,6 +72,10 @@
 @media(max-width: 900px){
     .popup-content{
         width: 300px;
+    }
+
+    .popup-description{
+        margin-top: 20px;
     }
 }
 

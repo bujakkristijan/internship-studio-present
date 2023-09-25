@@ -170,7 +170,7 @@ function updateSlidesPerView() {
     setTimeout(function () {
         document.getElementById("popup").style.display = "block";
         document.body.style.overflow = "hidden"; // Disable scrolling
-    }, 5000); 
+    }, 3000); 
 
     // Close popup when close button is clicked
     document.getElementById("closePopup").addEventListener("click", function () {
