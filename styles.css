@@ -508,9 +508,19 @@ body {
 .swiper-banner-image{
     display: block;
     width: 100%;
-    height: 100%;
+    /* height: 100%;  */
+    /* height: 100%; */
     object-fit: cover;
+    
+    /* proveriti kako namestiti Video.png kad je ubacen da je velicina ista, tj sve da budu iste !!! */
+    /* min-height: 220px; */
+
+    /* max-height: 714px; *//* ako hocu sve slike da mi budu jednake, npr Video.png nije ista po visini, pa sa ovim svima zadam istu visinu i object-fit:cover je razvuce da popuni da su sve iste onda, ali onda treba resiti za mobile screen size jer ne moze tako da bude, ne vidi se lepo*/
+    /* min-height: 350px; *//* zadao bi min-height i za telefone  da budu svi isti */
+    max-height: 714px;
   }
+
+  
 
 
 /*************************************************************/
