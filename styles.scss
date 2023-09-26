@@ -893,7 +893,7 @@ itself based on conditions like dark mode or light mode. */
 
 /************* MOBILE SCREEN SIZE DVG NUMBERS CONTAINER *************/
 
-@media(max-width: 1180px){
+@media(max-width: 1200px){
     .numbers-box-container{
         padding-left: 50px;
         padding-right: 50px;
@@ -1204,9 +1204,9 @@ itself based on conditions like dark mode or light mode. */
 
 
 .footer-container{
-    
+
         width: 100%;
-        height: 383px;
+        // height: 383px;
         background-image: url('./images/footer-background-image.png');
         background-size: cover; /* This scales the background image to cover the entire container */
         background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -1307,6 +1307,11 @@ itself based on conditions like dark mode or light mode. */
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    
 }
 
 .footer-small-row-box-container{
