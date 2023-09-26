@@ -6,7 +6,7 @@ const rename = require('gulp-rename');
 // Compile SCSS to CSS
 gulp.task('sass', function () {
   return gulp
-    .src('styless.scss') // Change this to 'styles.scss' to match your SCSS file name
+    .src('styles.scss') // Change this to 'styles.scss' to match your SCSS file name
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -15,7 +15,7 @@ gulp.task('sass', function () {
 
 // Watch for changes in SCSS files
 gulp.task('watch', function () {
-  gulp.watch('styless.scss', gulp.series('sass')); // Change this to 'styles.scss' to match your SCSS file name
+  gulp.watch('styles.scss', gulp.series('sass')); // Change this to 'styles.scss' to match your SCSS file name
 });
 
 // Default task

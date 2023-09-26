@@ -151,6 +151,14 @@ function updateSlidesPerView() {
     });
 }
 
+/* moze i ovako preko arrow funkcije da se pozovu sve tri odjednom */
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   initializeTabsLanguageIcon();
+//   toggleSwitchMode();
+//   popupMessage();
+// });
+
 document.addEventListener("DOMContentLoaded", initializeTabsLanguageIcon);
 document.addEventListener("DOMContentLoaded", toggleSwitchMode);
 document.addEventListener("DOMContentLoaded", popupMessage);

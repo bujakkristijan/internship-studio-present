@@ -60,11 +60,9 @@ itself based on conditions like dark mode or light mode. */
 }
 
 .popup-content {
-
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('./images/distribution-image.png'); 
     background-position: center;
     background-size: cover;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,15 +71,8 @@ itself based on conditions like dark mode or light mode. */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-
     width: 650px;
     height: 400px;
-
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center;
-    justify-content: center; */
-    
 }
 
 .popup-title{
