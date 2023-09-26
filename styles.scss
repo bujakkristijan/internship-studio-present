@@ -560,7 +560,8 @@ itself based on conditions like dark mode or light mode. */
 
 .more-about-us-box-container{
     /* flex: 1; */
-    width: 50%;
+    // width: 50%;
+    flex: 50%;
     height: 100%;
     
 }
@@ -642,7 +643,8 @@ itself based on conditions like dark mode or light mode. */
     }
 
     .more-about-us-box-container{
-        width: 80%;
+        // width: 80%;
+        flex: 80%;
     }
 
     .more-about-us-box-container.text-box{
