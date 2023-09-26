@@ -1233,7 +1233,7 @@ itself based on conditions like dark mode or light mode. */
 
     /* gap: 60px; */
 
-    flex-grow: 0;  /* Prevent this container from growing */
+    /* flex-grow: 0;  */ /* Prevent this container from growing */ /* moze i bez ovoga !!! */
 
     margin-bottom: 20px; /* da odvoji ceo container od small containera koji je zamracen */
 }
@@ -1302,7 +1302,7 @@ itself based on conditions like dark mode or light mode. */
 
 .footer-small-row-container{
     background-color: rgba(0, 0, 0, 0.33);
-    flex-grow: 1; /* Grow to take up available space */
+    /*flex-grow: 1; *//* Grow to take up available space */ /* moze i bez ovoga !!! */
 
     display: flex;
     align-items: center;
