@@ -30,6 +30,7 @@ itself based on conditions like dark mode or light mode. */
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -41,6 +42,28 @@ itself based on conditions like dark mode or light mode. */
     overflow-x: hidden; /* mislim da ne treba ipak ovo za scroll da se ne pojavljuje, svakako ga nema sad kako sam namestio da je responisve sve */
     background-color: var(--background-color);
   }
+
+
+/********** SCROLL BAR START ************/
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: #D9D9D9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #393812;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+/********** SCROLL BAR END ************/
+
 
 
 /*************************************************************/
@@ -117,9 +140,7 @@ itself based on conditions like dark mode or light mode. */
 }
 
 .header{
-    /* width: 100vw; */
-    max-height: 143px;
-    /* background-color: aqua; */
+    max-height: 143px; /* nzm sto sam stavio max-height, moze i samo height */
 }
 
 .header-box-2{
