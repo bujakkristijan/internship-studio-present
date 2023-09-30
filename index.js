@@ -169,8 +169,8 @@ xMenuButton.addEventListener('click', hideMenu);
 // Listen for window resize events and update slides-per-view
 window.addEventListener("resize", updateSlidesPerView);
 
-// Initial call to set slides-per-view on page load
-updateSlidesPerView();
+// // Initial call to set slides-per-view on page load
+// updateSlidesPerView();
 
   
   
