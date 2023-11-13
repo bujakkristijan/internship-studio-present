@@ -19,7 +19,7 @@ Initially, I developed the project using Vanilla JS. After completing that phase
 
 **Technologies**: HTML, JavaScript, SCSS (Gulp)/CSS, Swiper.js.
 
-**Transformed React project**: https://github.com/bujakkristijan/internship-studio-present-react
+### Transformed React project
 
 **React App Demo**: https://bujakkristijan.github.io/internship-studio-present-react
 
